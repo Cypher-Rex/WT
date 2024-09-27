@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+    }
+    span{
+        color: rgba(0, 60, 189, 0.822);
+        font-size: 1.5em;
+        margin-top: 5px;
+        display: block;
+    }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+        document.getElementById("name").textContent = localStorage.getItem("name");
+        document.getElementById("gender").textContent = localStorage.getItem("gender");
+        document.getElementById("contact").textContent = localStorage.getItem("contact");
+        document.getElementById("email").textContent = localStorage.getItem("email");
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome!</h2>
+        <span id="name"></span>
+        <span id="gender"></span>
+        <span id="contact"></span>
+        <span id="email"></span>
+    </div>
+</body>
+</html>
