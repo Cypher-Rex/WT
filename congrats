@@ -13,6 +13,7 @@
         height: 100vh;
         margin: 0;
         background-color: #f4f4f4;
+        text-align: center;
     }
     .container {
             background-color: white;
@@ -31,7 +32,8 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function(){
-        document.getElementById("name").textContent = localStorage.getItem("name");
+        document.getElementById("name").textContent = localStorage.getItem("fname")+" "+localStorage.getItem("lname");
+        document.getElementById("fname").textContent = localStorage.getItem("fname");
         document.getElementById("gender").textContent = localStorage.getItem("gender");
         document.getElementById("contact").textContent = localStorage.getItem("contact");
         document.getElementById("email").textContent = localStorage.getItem("email");
@@ -40,11 +42,11 @@
 </head>
 <body>
     <div class="container">
-        <h2>Welcome!</h2>
-        <span id="name"></span>
-        <span id="gender"></span>
-        <span id="contact"></span>
-        <span id="email"></span>
+        <h2>Welcome `id=fname"" `!</h2>
+        <span id="name"></span><br>
+        <span id="gender"></span><br>
+        <span id="contact"></span><br>
+        <span id="email"></span><br>
     </div>
 </body>
 </html>
