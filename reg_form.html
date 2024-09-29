@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,14 +57,14 @@
     .button {
         width: 100%;
         padding: 10px;
-        background-color: #2ecc71;
+        background-color: #000000;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
     }
     
-    button:hover {
+    .button:hover {
         background-color: #27ae60;
     }
     </style>
@@ -73,9 +74,14 @@
         <form id="registrationForm">
             <h2>Register</h2>
             <div class="input-group">
-                <label>Name</label>
-                <input type="text" id="name" name="name">
-                <span id="name_error" ></span>
+                <label>First Name</label>
+                <input type="text" id="fname" name="fname">
+                <span id="fname_error" ></span>
+            </div>
+            <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" id="lname" name="lname">
+                <span id="lname_error" ></span>
             </div>
             <div class="input-group">
                 <label for="contact">Contact</label>
@@ -117,7 +123,8 @@
     <script >
         function validation(){
 
-            document.getElementById("name_error").textContent= "";
+            document.getElementById("fname_error").textContent= "";
+            document.getElementById("lname_error").textContent= "";
             document.getElementById("contact_error").textContent= "";
             document.getElementById("gender_error").textContent= "";
             document.getElementById("email_error").textContent= "";
@@ -126,11 +133,19 @@
 
             let valid = true;
 
-            let name = document.getElementById("name").value.trim();
-            const namePattern = /^[a-zA-Z\s]+$/;
-            if (name == "" || !namePattern.test(name))
+            let fname = document.getElementById("fname").value.trim();
+            const fnamePattern = /^[a-zA-Z\s]+$/;
+            if (fname == "" || !fnamePattern.test(fname))
             {
-                document.getElementById("name_error").textContent="Please Enter a Valid Name";
+                document.getElementById("fname_error").textContent="Please Enter a Valid Name";
+                valid = false;
+            }
+
+            let lname = document.getElementById("lname").value.trim();
+            const lnamePattern = /^[a-zA-Z\s]+$/;
+            if (lname == "" || !lnamePattern.test(lname))
+            {
+                document.getElementById("lname_error").textContent="Please Enter a Valid Name";
                 valid = false;
             }
 
@@ -174,7 +189,8 @@
 
             if (valid == true)
             {
-                localStorage.setItem("name",name);
+                localStorage.setItem("fname", fname);
+                localStorage.setItem("lname", lname);
                 localStorage.setItem("contact", contact);
                 localStorage.setItem("email", email);
                 localStorage.setItem("gender", gender);
