@@ -1,0 +1,14 @@
+document.getElementById("reserveForm").addEventListener("submit", function(event) { event.preventDefault();
+    let name = document.getElementById("name").value; 
+    let date = document.getElementById("date").value; 
+    let time = document.getElementById("time").value; 
+    let guests = document.getElementById("guests").value;
+    let reserveMessage = `Thank you, ${name}! Your table for ${guests} guests has been reserved on ${date} at ${time}.`; 
+document.getElementById("reserveMessage").textContent = reserveMessage;
+document.getElementById("reserveForm").reset(); });
+document.getElementById("orderForm").addEventListener("submit", function(event) { event.preventDefault(); 
+    let food = document.getElementById("food").value;
+    let quantity = document.getElementById("quantity").value;
+    let orderMessage = `You have successfully ordered ${quantity} ${food}(s). Thank you for your order!`; 
+    document.getElementById("orderMessage").textContent = orderMessage; 
+    document.getElementById("orderForm").reset(); });
