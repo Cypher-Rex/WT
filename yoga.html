@@ -11,12 +11,15 @@
     padding: 0;
     color: #333;
     background-color: #f8f9fa;
+    text-align: center;
 }
 
 header {
-    background: #4CAF50;
+    background-image: url('img/yoga.jpg?height=900&width=1200');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 20px;
+    padding: 100px;
     text-align: center;
 }
 
@@ -30,10 +33,6 @@ nav ul li {
     margin: 0 15px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-}
 
 main {
     padding: 20px;
@@ -51,6 +50,26 @@ h2 {
     color: #4CAF50;
 }
 
+ul li{
+    text-align: left;
+}
+
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.trainers img {
+    max-width: 150px;
+    height: 100px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+.trainers img:hover {
+    transform: scale(2);
+}
 footer {
     background: #333;
     color: white;
@@ -78,12 +97,35 @@ footer a {
                 <li><strong>Vinyasa Flow:</strong> A dynamic flow of poses that builds strength and flexibility.</li>
                 <li><strong>Meditation:</strong> Guided sessions focusing on mindfulness and relaxation.</li>
                 <li><strong>Restorative Yoga:</strong> A relaxing practice that uses props to support the body.</li>
+                <li><strong>Pilates:</strong>A combination of approximately 50 simple, repetitive exercises to create muscular exertion</li>
+                <li><strong>Zumba:</strong>One of the exercise programs that can provide a full-body workout and a dance class.</li>
             </ul>
         </section>
 
         <section id="about">
             <h2>About Us</h2>
             <p>At Zen Yoga Center, we believe in creating a peaceful and welcoming environment where everyone can explore their yoga journey. Our experienced instructors are dedicated to helping you achieve your personal wellness goals.</p>
+        </section>
+
+        <section id="trainer">
+            <h2>Trainers</h2>
+            <div class="trainer-grid">
+                <div class="trainers">
+                    <img src="img/QMs4NC.gif">
+                    <h3>Ram Dev Baba</h3>
+                    <p>Yoga Trainer</p>
+                </div>
+                <div class="trainers">
+                    <img src="img/zomba.jpg">
+                    <h3>Sherya Das</h3>
+                    <p>Zumba Trainer</p>
+                </div>
+                <div class="trainers">
+                    <img src="img/plate.jpeg">
+                    <h3>Anuja Singh</h3>
+                    <p>Pilates</p>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -93,7 +135,6 @@ footer a {
             <p>Phone: (123) 456-7890</p>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2024 Zen Yoga Center. All rights reserved.</p>
     </footer>
